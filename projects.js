@@ -18,3 +18,24 @@ function titleCase(str) {
 
 titleCase("I'm a little tea pot");
 
+/*Return an array consisting of the largest number from each provided sub-array.*/
+function largestOfFour(arr) {
+  
+  var largNum = 0;
+  var myArray = [];
+  
+  for (var i=0;i<arr.length;i++) {
+    
+    for (var j=0;j<arr[i].length;j++) {      
+      if ( largNum < arr[i][j]) {
+        largNum = arr[i][j];
+      }
+    }
+    
+    myArray[i] = largNum;
+    largNum = 0;
+  }
+  return myArray;
+}
+
+largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
