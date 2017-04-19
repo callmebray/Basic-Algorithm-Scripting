@@ -52,3 +52,23 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+/*Repeat a given string (first argument) num times (second argument). Return an empty string if num is not a positive number.*/
+
+function repeatStringNumTimes(str, num) {
+  
+  var newStr = '';
+  
+  if (num > 0) {
+    var i=0;
+  
+    while (i<num) {
+      newStr += str;
+      i++;
+    }
+    return newStr;
+    
+  } else return newStr;
+}
+
+repeatStringNumTimes("abc", 3);
