@@ -133,3 +133,17 @@ function mutation(arr) {
 }
 
 mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+
+/*Remove all falsy values from an array.*/
+function bouncer(arr) {
+  function falsy (n) {
+    
+    if (n === true || typeof n === 'string' || typeof n === 'number') {
+      return n;
+    }
+  }
+    var filtered = arr.filter(falsy);
+  return filtered;
+}
+
+bouncer([7, "ate", "", false, 9]);
