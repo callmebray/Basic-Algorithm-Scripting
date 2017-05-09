@@ -157,3 +157,28 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([3, 10, 5], 3);
+
+/*Write a function which takes a ROT13 encoded string as input and returns a decoded string.*/
+function rot13(str) { // LBH QVQ VG!
+  
+  var newArray = str.split('');
+  var finalArray = [];
+
+  for (var i=0; i<newArray.length;i++) {
+    
+    var change = newArray[i].charCodeAt();
+
+    if (change < 78 && change >= 65) {
+      change += 13;
+    }else if (change >= 77) {
+      change -= 13;
+    }
+    
+    finalArray.push(change);
+  }
+ 
+  return String.fromCharCode.apply(null, finalArray);
+}
+
+// Change the inputs below to test
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
