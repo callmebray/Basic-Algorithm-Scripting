@@ -158,7 +158,7 @@ function getIndexToIns(arr, num) {
 
 getIndexToIns([3, 10, 5], 3);
 
-/*Write a function which takes a ROT13 encoded string as input and returns a decoded string.*/
+/*Write a function which takes an ROT13 encoded string as input and returns a decoded string.*/
 function rot13(str) { // LBH QVQ VG!
   
   var newArray = str.split('');
